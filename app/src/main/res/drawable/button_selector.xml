@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color when pressed -->
+    <item android:state_pressed="true" android:drawable="@color/button_pressed" />
+
+    <!-- Color when hovered (hand on it) -->
+    <item android:state_hovered="true" android:drawable="@color/button_hover" />
+
+    <!-- Default color -->
+    <item android:drawable="@color/button_default" />
+</selector>

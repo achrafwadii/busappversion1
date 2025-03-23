@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/rounded_background"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="53dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white" />
+
+    <!-- Source Input with Icon -->
+    <LinearLayout
+        android:layout_width="367dp"
+        android:layout_height="53dp"
+        android:background="@drawable/rounded_textview"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="25dp"
+        >
+
+        <!-- Icon for Source Input -->
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Source Icon"
+            android:src="@drawable/ic_location_on" />
+
+        <!-- Source Input -->
+        <EditText
+            android:id="@+id/sourceInput"
+            android:layout_width="316dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Enter source location"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            />
+    </LinearLayout>
+
+    <!-- Spacer --> <TextView
+    android:layout_width="5dp"
+    android:layout_height="14dp"/>
+
+    <!-- Destination Input with Icon -->
+    <LinearLayout
+        android:layout_width="367dp"
+        android:layout_height="54dp"
+        android:background="@drawable/rounded_textview"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Icon for Destination Input -->
+
+        <!-- Destination Input -->
+        <ImageView
+            android:layout_width="39dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Destination Icon"
+            android:src="@drawable/ic_location_on1" />
+
+        <EditText
+            android:id="@+id/destinationInput"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Enter destination location"
+            android:minHeight="48dp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Buttons -->
+
+    <!-- ListView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/white"
+            android:shadowColor="#000000"
+            android:text="Cancel"
+            android:textColor="@android:color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/white"
+            android:shadowColor="#FFFFFF"
+            android:text="Search"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/listview_background"
+        android:elevation="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginHorizontal="16dp"
+        android:padding="2dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkblue">#141442</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="editTextTextColor">#000000</color>
+    <color name="black">#000000</color>
+    <color name="primaryColor">#2196F3</color> <!-- Black for light mode -->
+    <color name="light_gray">#E0E0E0</color>
+    <color name="dark_gray">#616161</color>
+    <color name="white1">#FFFFFF</color>
+    <color name="black1">#000000</color>
+    <color name="button_default">#FF9800</color>  <!-- Orange (Default) -->
+    <color name="button_pressed">#E65100</color>  <!-- Darker Orange (Pressed) -->
+    <color name="button_hover">#FFC107</color>
+    <color name="blue">#00BCD4</color>  <!-- Lighter Orange (Hover) -->
+
+
+</resources>
