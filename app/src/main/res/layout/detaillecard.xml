@@ -160,7 +160,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerArrets"
             android:layout_width="match_parent"
-            android:layout_height="198dp"
+            android:layout_height="1dp"
             android:layout_marginTop="0dp"
             android:clipToPadding="false"
             android:paddingBottom="16dp" />
