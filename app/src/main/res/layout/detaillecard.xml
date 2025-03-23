@@ -1,14 +1,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:padding="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@color/white"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <!-- Section Source & Destination -->
@@ -21,20 +21,21 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="25dp"
-                android:src="@drawable/bus_white"
-                android:layout_marginEnd="60dp"
-                android:paddingBottom="0dp"/>
+                android:layout_marginEnd="10dp"
+                android:paddingBottom="0dp"
+                android:src="@drawable/bus_white" />
+
             <TextView
                 android:id="@+id/tvSource"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="Source"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:gravity="center"
-                android:paddingBottom="16dp"/>
+                android:padding="8dp"
+                android:paddingBottom="16dp"
+                android:text="Source"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,20 +43,20 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:text=" → "
+                android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/black" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvDestination"
-                android:layout_width="wrap_content"
+                android:layout_width="174dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:padding="8dp"
                 android:text="Destination"
-                android:textSize="16sp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:gravity="center" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <!-- Ligne séparatrice -->
@@ -76,31 +77,33 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_time"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_time" />
 
             <TextView
                 android:id="@+id/tvHoraireDepart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10:00"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="--"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tvHoraireArrivee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10:00"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -122,16 +125,16 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_bus"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_bus" />
 
             <TextView
                 android:id="@+id/tvNumBus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Numéro de bus : 123"
-                android:textSize="16sp"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -146,29 +149,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Points d'arrêt :"
-            android:textSize="18sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginBottom="8dp" />
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/point_icon"
-            android:layout_marginEnd="8dp"/>
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerArrets"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="461dp"
             android:layout_marginTop="0dp"
             android:clipToPadding="false"
             android:paddingBottom="16dp" />
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/point_icon"
-            android:layout_marginEnd="8dp"/>
+
 
     </LinearLayout>
 </ScrollView>
