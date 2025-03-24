@@ -516,6 +516,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_routes -> {
+                val intent = Intent(this, AllRoutesActivity::class.java)
+                startActivity(intent)
                 Toast.makeText(this, "Routes", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_schedule -> {

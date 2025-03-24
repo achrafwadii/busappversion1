@@ -12,7 +12,8 @@
     <color name="button_default">#FF9800</color>  <!-- Orange (Default) -->
     <color name="button_pressed">#E65100</color>  <!-- Darker Orange (Pressed) -->
     <color name="button_hover">#FFC107</color>
-    <color name="blue">#00BCD4</color>  <!-- Lighter Orange (Hover) -->
+    <color name="blue">#00BCD4</color>
+    <color name="gray">#6E6E6E</color>  <!-- Lighter Orange (Hover) -->
 
 
 </resources>
