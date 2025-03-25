@@ -19,7 +19,6 @@ class login : AppCompatActivity() {
         val emailtxt : TextView = findViewById(R.id.login_email)
         val passwordtxt : TextView = findViewById(R.id.login_password)
         val toSignup : TextView = findViewById(R.id.signupRedirectText)
-        val stay_visitor : TextView = findViewById(R.id.stayasvisitor)
         loginbtn.setOnClickListener{
             val email = emailtxt.text.toString().trim()
             val password = passwordtxt.text.toString()
@@ -43,12 +42,6 @@ class login : AppCompatActivity() {
             startActivity(intent1)
 
         }
-        stay_visitor.setOnClickListener{
-            val intent3 = Intent(this, MainActivity::class.java)
-            startActivity(intent3)
-            finish()
-        }
-
     }
 
 }

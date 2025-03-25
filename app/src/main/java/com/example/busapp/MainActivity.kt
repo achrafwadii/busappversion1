@@ -520,12 +520,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
                 Toast.makeText(this, "Routes", Toast.LENGTH_SHORT).show()
             }
-            R.id.nav_schedule -> {
-                Toast.makeText(this, "Schedule", Toast.LENGTH_SHORT).show()
-            }
-            R.id.nav_rateUs -> {
-                Toast.makeText(this, "Rate Us", Toast.LENGTH_SHORT).show()
-            }
+
             R.id.nav_profile -> {
                 val intent = Intent(this, ProfileActivity::class.java)
                 startActivity(intent)

@@ -59,15 +59,7 @@
                     android:textSize="18sp"
                     app:cornerRadius="30dp" />
 
-                <TextView
-                    android:id="@+id/forgot_password"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="6dp"
-                    android:padding="8dp"
-                    android:text="Forgot Password?"
-                    android:textSize="16sp" />
+
 
                 <TextView
                     android:id="@+id/signupRedirectText"
@@ -76,23 +68,13 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="14dp"
                     android:padding="8dp"
-                    android:text="Not yet registered? Signup"
+                    android:text="Not yet registered ? Signup"
                     android:clickable="true"
                     android:focusable="true"
                     android:textSize="18sp" />
 
 
-                <TextView
-                    android:id="@+id/stayasvisitor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="14dp"
-                    android:padding="8dp"
-                    android:text="Stay as a Visitor"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:textSize="18sp" />
+
 
             </LinearLayout>
 

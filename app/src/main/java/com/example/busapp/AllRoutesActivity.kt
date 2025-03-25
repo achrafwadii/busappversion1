@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.busapp.detaille_itineraire.DetailleItineraireActivity
 import com.example.busapp.detaille_itineraire.RouteDetailsActivity
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -25,13 +26,18 @@ class AllRoutesActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Configurer l'adapter
-        adapter = RoutesAdapter(routesList) { route ->
-            // Afficher les détails de la route (optionnel)
-            showRouteDetails(route)
-        }
-        recyclerView.adapter = adapter
+        adapter = RoutesAdapter(
+            this,       // Context en premier
+            routesList, // Liste des routes en second
+            { route ->  // Lambda pour le click
+                val intent = Intent(this, DetailleItineraireActivity::class.java).apply {
+                    putExtra("ROUTE", route)
+                }
+                startActivity(intent)
+            }
+        )
 
-        // Charger les routes depuis Firestore
+        recyclerView.adapter = adapter
         loadRoutesFromFirestore()
     }
 
@@ -61,7 +67,7 @@ class AllRoutesActivity : AppCompatActivity() {
 
     private fun showRouteDetails(route: Route) {
         // Ouvrir une nouvelle activité ou BottomSheet pour afficher les détails
-        val intent = Intent(this, RouteDetailsActivity::class.java).apply {
+        val intent = Intent(this, DetailleItineraireActivity::class.java).apply {
             putExtra("ROUTE", route)
         }
         startActivity(intent)

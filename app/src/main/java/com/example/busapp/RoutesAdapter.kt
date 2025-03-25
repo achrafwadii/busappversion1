@@ -1,21 +1,22 @@
 package com.example.busapp
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+// RoutesAdapter.kt
 class RoutesAdapter(
-    private val routes: List<Route>,
-    private val onItemClick: (Route) -> Unit
+    private val context: Context,  // Ajout du paramètre Context
+    private val routes: List<Route>,  // Liste des routes
+    private val onItemClick: (Route) -> Unit  // Callback pour les clics
 ) : RecyclerView.Adapter<RoutesAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textDep: TextView = view.findViewById(R.id.textDep)
         val textDes: TextView = view.findViewById(R.id.textDes)
-        val textHeureDep: TextView = view.findViewById(R.id.textHeureDep)
-        val textHeureDes: TextView = view.findViewById(R.id.textHeureDes)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,10 +29,7 @@ class RoutesAdapter(
         val route = routes[position]
         holder.textDep.text = "Départ: ${route.dep}"
         holder.textDes.text = "Destination: ${route.des}"
-        holder.textHeureDep.text = "Heure de départ: ${route.heuredep}"
-        holder.textHeureDes.text = "Heure d'arrivée: ${route.heuredes}"
 
-        // Gérer le clic sur un élément
         holder.itemView.setOnClickListener {
             onItemClick(route)
         }

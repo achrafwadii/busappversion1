@@ -10,14 +10,8 @@
             android:id="@+id/nav_routes"
             android:icon="@drawable/ic_routes"
             android:title="Routes" />
-        <item
-            android:id="@+id/nav_schedule"
-            android:icon="@drawable/ic_schedule"
-            android:title="Schedule" />
-        <item
-            android:id="@+id/nav_rateUs"
-            android:icon="@drawable/ic_rate"
-            android:title="Rate Us" />
+
+
 
     </group>
 

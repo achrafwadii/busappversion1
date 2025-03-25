@@ -7,20 +7,21 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.busapp.R
 
-class AdapterArret(private val arrets: List<String>) : RecyclerView.Adapter<AdapterArret.ArretViewHolder>() {
+// AdapterArret.kt
+class AdapterArret(private val arrets: List<String>) : RecyclerView.Adapter<AdapterArret.ViewHolder>() {
 
-    class ArretViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvArret: TextView = view.findViewById(R.id.textArret)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArretViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_arret, parent, false)
-        return ArretViewHolder(view)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ArretViewHolder, position: Int) {
-        holder.tvArret.text = arrets[position].trim()
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.tvArret.text = "• ${arrets[position]}"
     }
 
     override fun getItemCount() = arrets.size

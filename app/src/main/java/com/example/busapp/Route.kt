@@ -3,26 +3,26 @@ package com.example.busapp
 import android.os.Parcel
 import android.os.Parcelable
 
+// Route.kt
+@Parcelize
 data class Route(
-    val id: String = "",         // Identifiant de la route
-    val numbus: String = "",     // Numéro du bus
-    val dep: String = "",        // Départ
-    val des: String = "",        // Destination
-    val heuredep: String = "",  // Heure de départ
-    val heuredes: String = "",  // Heure d'arrivée
-    val pointarret: String = ""  // Points d'arrêt
+    val id: String = "",
+    val numbus: String = "",
+    val dep: String = "",
+    val des: String = "",
+    val heuredep: String = "",
+    val heuredes: String = "",
+    val pointarret: String = ""  // Champ pour les points d'arrêt
 ) : Parcelable {
-
-    // Constructeur utilisé pour créer un objet à partir d'un Parcel
     constructor(parcel: Parcel) : this(
-        parcel.readString() ?: "",
-        parcel.readString() ?: "",
-        parcel.readString() ?: "",
-        parcel.readString() ?: "",
-        parcel.readString() ?: "",
-        parcel.readString() ?: "",
-        parcel.readString() ?: ""
-    )
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString()
+    ) {
+    }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
